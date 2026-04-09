@@ -17,9 +17,12 @@ class UniqueCollectionTest {
     @Test
     fun addAnItem() {
         collection.addItem(Item("TEST1"))
-       val item = collection.get(0)
+        collection.addItem(Item("TEST1.5"))
+       val item1 = collection.get(0)
+        val item2 = collection.get(1)
 
-        assert(item.name == "TEST1")
+        assert(item1.name == "TEST1")
+        assert(item2.name == "TEST1.5")
     }
 
     // TODO 2: Write a test to ensure that only unique items can be added to the collection
